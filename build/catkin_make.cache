@@ -1,0 +1,2 @@
+mycobot_280jn:mycobot_280jn_gripper_moveit:mycobot_280jn_moveit:mycobot_communication:mycobot_description:yolo_object_detection
+-DCATKIN_DEVEL_PREFIX=/home/radhika/mycobot_ws/devel -DCMAKE_INSTALL_PREFIX=/home/radhika/mycobot_ws/install -G Unix Makefiles

@@ -1,0 +1,10 @@
+<launch>
+    <!-- Launch the camera node -->
+    <node pkg="mycobot_280jn" type="camera_listener.py" name="camera_listener" output="screen" />
+
+    <!-- Launch the object detection node -->
+    <node pkg="mycobot_280jn" type="object_detection.py" name="object_detection" output="screen" />
+
+    <!-- Include MoveIt for the MyCobot 280-JN -->
+    <include file="$(find mycobot_280jn_gripper_moveit)/launch/mycobot_moveit.launch" />
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/radhika/mycobot_ws/devel
+
+Name: yolo_object_detection
+Description: Description of yolo_object_detection
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

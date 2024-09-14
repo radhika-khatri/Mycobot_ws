@@ -1,0 +1,54 @@
+Panels:
+  - Class: rviz/Displays
+    Name: Displays
+  - Class: rviz/Views
+    Name: Views
+    Saved:
+      target_frame: base_link
+      eye: [2.0, 2.0, 2.0]
+      focus: [0.0, 0.0, 0.0]
+      up: [0.0, 0.0, 1.0]
+      distance: 5.0
+      view_angle: 0.7853981852531433
+      type: Orbit
+
+Displays:
+  - Name: Robot Model
+    Class: rviz/RobotModel
+    Enabled: true
+    Robot Description: robot_description     # Ensure this parameter is being published (URDF)
+    TF Prefix: ''
+    Update Rate: 0
+
+  - Name: TF
+    Class: rviz/TF
+    Enabled: true
+    Show Axes: true
+    Show Names: false
+    Marker Scale: 1.0
+    Frame Timeout: 30.0
+
+  - Name: Camera View
+    Class: rviz/Image
+    Enabled: true
+    Image Topic: /camera/rgb/image_raw       # Adjust this topic based on your camera feed
+    Queue Size: 2
+    Transport Hint: raw
+    Alpha: 1.0
+    Min value: 0.0
+    Max value: 1.0
+
+  - Name: Detected Objects
+    Class: rviz/MarkerArray
+    Enabled: true
+    Marker Topic: /detected_objects          # The topic for visualizing detected objects (adjust based on your system)
+    Queue Size: 10
+
+Views:
+  Current:
+    Type: Orbit
+    Target Frame: base_link
+    Distance: 5
+    Focal Point: [0.0, 0.0, 0.0]
+    Up: [0.0, 0.0, 1.0]
+

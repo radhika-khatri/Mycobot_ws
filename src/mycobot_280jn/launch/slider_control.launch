@@ -1,0 +1,14 @@
+<launch>
+    <!-- Load URDF model -->
+    <arg name="model" default="$(find mycobot_description)/urdf/mycobot_280_jn.urdf"/>
+    <param name="robot_description" command="$(find xacro)/xacro --inorder $(arg model)" />
+
+    <!-- Use joint_state_publisher (with GUI mode enabled) -->
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+    <!-- Run robot_state_publisher to broadcast the robot's state -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen"/>
+
+    <!-- Start the slider control script -->
+    <node name="slider_control" pkg="mycobot_280jn" type="slider_control.py" output="screen" />
+</launch>

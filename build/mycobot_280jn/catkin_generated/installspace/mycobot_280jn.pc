@@ -1,0 +1,8 @@
+prefix=/home/radhika/mycobot_ws/install
+
+Name: mycobot_280jn
+Description: Description of mycobot_280jn
+Version: 0.0.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy std_msgs actionlib image_transport cv_bridge
