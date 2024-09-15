@@ -1,6 +1,6 @@
 <launch>
     <!-- Load URDF model -->
-    <arg name="model" default="$(find mycobot_description)/urdf/mycobot_280_jn.urdf"/>
+    <arg name="model" default="$(find mycobot_description)/urdf/mycobot_280_jn/mycobot_280_jn.urdf"/>
     <param name="robot_description" command="$(find xacro)/xacro --inorder $(arg model)" />
 
     <!-- Use joint_state_publisher (with GUI mode enabled) -->
